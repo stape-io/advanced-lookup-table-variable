@@ -10,7 +10,7 @@ if (data.table && data.table.length) for (let i = 0; i < data.table.length; i++)
     if (row.rule === 'matchesRegEx' && inputOne.match(inputTwo)) return row.output;
     if (row.rule === 'matchesRegExIgnoreCase' && inputOne.toLowerCase().match(inputTwo.toLowerCase())) return row.output;
     if (row.rule === 'doesNotEqual' && inputOne != inputTwo) return row.output;
-    if (row.rule === 'doesNotContain' && (inputOne.indexOf(inputTwo) < -1)) return row.output;
+    if (row.rule === 'doesNotContain' && (inputOne.indexOf(inputTwo) == -1)) return row.output;
     if (row.rule === 'doesNotStartWith' && !inputOne.match('^(' + inputTwo + ')')) return row.output;
     if (row.rule === 'doesNotEndWith' && !inputOne.match('(' + inputTwo + ')$')) return row.output;
     if (row.rule === 'doesNotMatchRegEx' && !inputOne.match(inputTwo)) return row.output;
